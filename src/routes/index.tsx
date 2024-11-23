@@ -4,7 +4,6 @@ import Projects from "~/components/Projects";
 import Socials from "~/components/Socials";
 import { Button } from "~/components/ui/button";
 import Download from "~/svgs/Download";
-import nak from "/images/nak.webp";
 
 const NAK_BIRTH_YEAR = 2003;
 
@@ -12,7 +11,13 @@ export default function Home() {
   return (
     <main class="mx-auto mt-8 flex max-w-3xl flex-col gap-16 pb-16 px-8 font-sans antialiased">
       <section class="z-30 flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
-        <img class="rounded-full shadow-sm" src={nak} alt="Photo of Nak" width={250} height={250} />
+        <img
+          class="rounded-full shadow-sm"
+          src="/images/nak.webp"
+          alt="Photo of Nak"
+          width={250}
+          height={250}
+        />
         <div class="flex flex-col">
           <h1 class="title flex flex-row text-5xl">
             hi! Nak here{" "}
