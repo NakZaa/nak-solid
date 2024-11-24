@@ -2,6 +2,14 @@ import { A } from "@solidjs/router";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Github, Globe } from "~/svgs/socials";
+import { Cloudinary } from "@cloudinary/url-gen/index";
+import { scale } from "@cloudinary/url-gen/actions/resize";
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+  }
+});
 
 const Projects = () => {
   return (
@@ -10,7 +18,7 @@ const Projects = () => {
         <CardHeader>
           <A href="https://programming.in.th">
             <img
-              src="/images/prog.webp"
+              src={cld.image("nakonkate/prog").quality("auto").format("auto").toURL()}
               alt="programming.in.th"
               width={500}
               height={300}
@@ -52,7 +60,7 @@ const Projects = () => {
         <CardHeader>
           <A href="https://lawcu-sum.vercel.app">
             <img
-              src="/images/lawsum.webp"
+              src={cld.image("nakonkate/lawsum").quality("auto").format("auto").toURL()}
               alt="lawcu-sum"
               width={500}
               height={300}

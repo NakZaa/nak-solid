@@ -7,6 +7,7 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.21.0",
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.0",

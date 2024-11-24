@@ -3,6 +3,14 @@ import { Card, CardContent } from "~/components/ui/card";
 import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { Badge } from "./ui/badge";
 import { Github, Globe } from "~/svgs/socials";
+import { Cloudinary } from "@cloudinary/url-gen/index";
+import { scale } from "@cloudinary/url-gen/actions/resize";
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+  }
+});
 
 const Experience = () => {
   return (
@@ -24,7 +32,12 @@ const Experience = () => {
                 >
                   <div class="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
                     <img
-                      src="/images/chevron.webp"
+                      src={cld
+                        .image("nakonkate/chevron")
+                        .quality("auto")
+                        .format("auto")
+                        .resize(scale().width(92).height(92))
+                        .toURL()}
                       alt="Chevron"
                       class="aspect-square h-full w-full object-contain bg-background dark:bg-white"
                     />
@@ -72,7 +85,12 @@ const Experience = () => {
                 >
                   <div class="relative flex h-12 w-12 shrink-0 overflow-hidden rounded-full size-12 border">
                     <img
-                      src="/images/proglogo.webp"
+                      src={cld
+                        .image("nakonkate/proglogo")
+                        .quality("auto")
+                        .format("auto")
+                        .resize(scale().width(92).height(92))
+                        .toURL()}
                       alt="Chevron"
                       class="aspect-square h-full w-full object-contain bg-background dark:bg-white"
                     />
@@ -124,7 +142,12 @@ const Experience = () => {
                 >
                   <div class="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
                     <img
-                      src="/images/CU.webp"
+                      src={cld
+                        .image("nakonkate/CU")
+                        .quality("auto")
+                        .format("auto")
+                        .resize(scale().width(92).height(92))
+                        .toURL()}
                       alt="Chevron"
                       class="aspect-square h-full w-full object-contain bg-background dark:bg-white"
                     />
@@ -163,7 +186,12 @@ const Experience = () => {
                 >
                   <div class="relative flex h-12 w-12 shrink-0 overflow-hidden rounded-full size-12 border">
                     <img
-                      src="/images/triam.webp"
+                      src={cld
+                        .image("nakonkate/triam")
+                        .quality("auto")
+                        .format("auto")
+                        .resize(scale().width(99).height(121))
+                        .toURL()}
                       alt="Chevron"
                       class="aspect-square h-full w-full object-contain bg-background dark:bg-white"
                     />

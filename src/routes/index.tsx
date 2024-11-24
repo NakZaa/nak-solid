@@ -1,3 +1,5 @@
+import { scale } from "@cloudinary/url-gen/actions/resize";
+import { Cloudinary } from "@cloudinary/url-gen/index";
 import { A } from "@solidjs/router";
 import Experience from "~/components/Experience";
 import Projects from "~/components/Projects";
@@ -7,13 +9,24 @@ import Download from "~/svgs/Download";
 
 const NAK_BIRTH_YEAR = 2003;
 
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+  }
+});
+
 export default function Home() {
   return (
     <main class="mx-auto mt-8 flex max-w-3xl flex-col gap-16 pb-16 px-8 font-sans antialiased">
       <section class="z-30 flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
         <img
           class="rounded-full shadow-sm"
-          src="/images/nak.webp"
+          src={cld
+            .image("nakonkate/nak")
+            .quality("auto")
+            .format("auto")
+            .resize(scale().width(500).height(500))
+            .toURL()}
           alt="Photo of Nak"
           width={250}
           height={250}
@@ -22,7 +35,17 @@ export default function Home() {
           <h1 class="title flex flex-row text-5xl">
             hi! Nak here{" "}
             <div class="hidden size-fit px-4 md:flex">
-              <img src="/images/otter.webp" alt="otter" width={50} height={50} />
+              <img
+                src={cld
+                  .image("nakonkate/otter")
+                  .quality("auto")
+                  .format("auto")
+                  .resize(scale().width(150).height(150))
+                  .toURL()}
+                alt="otter"
+                width={50}
+                height={50}
+              />
             </div>
           </h1>
           <p class="mt-4 flex items-center gap-1">

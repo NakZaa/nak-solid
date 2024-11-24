@@ -13,7 +13,9 @@ export default function App() {
         <>
           <MetaProvider>
             <Title>Nak's</Title>
-            <Meta name="nak's" content="where nak shares his life experience" />
+            <Meta name="keywords" content="Nak, Nakonkate" />
+            <Meta name="og:description" content="where nak shares his life experience" />
+            <Meta name="description" content="where nak shares his life experience" />
             <Nav />
             <Suspense>{props.children}</Suspense>
             <Footer />
