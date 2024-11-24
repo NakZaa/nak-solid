@@ -32,7 +32,7 @@ export default function Home() {
           height={250}
         />
         <div class="flex flex-col">
-          <h1 class="title flex flex-row text-5xl">
+          <h1 class="title flex flex-row text-5xl font-bold">
             hi! Nak here{" "}
             <div class="hidden size-fit px-4 md:flex">
               <img

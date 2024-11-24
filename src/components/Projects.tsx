@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <Card class="flex flex-col">
-        <CardHeader>
+        <CardHeader class="bg-white rounded-t-xl">
           <A href="https://programming.in.th">
             <img
               src={cld.image("nakonkate/prog").quality("auto").format("auto").toURL()}
@@ -26,7 +26,7 @@ const Projects = () => {
             />
           </A>
         </CardHeader>
-        <CardContent class="flex flex-col gap-2">
+        <CardContent class="flex flex-col gap-2  pt-4">
           <CardTitle>
             <A href="https://programming.in.th/">programmin.in.th</A>
           </CardTitle>
@@ -57,18 +57,18 @@ const Projects = () => {
         </CardFooter>
       </Card>
       <Card class="flex flex-col">
-        <CardHeader>
+        <CardHeader class="bg-white rounded-t-xl">
           <A href="https://lawcu-sum.vercel.app">
             <img
               src={cld.image("nakonkate/lawsum").quality("auto").format("auto").toURL()}
               alt="lawcu-sum"
               width={500}
               height={300}
-              class="h-40 w-full object-cover object-top"
+              class="h-40 w-full object-scale-down object-top"
             />
           </A>
         </CardHeader>
-        <CardContent class="flex flex-col gap-2">
+        <CardContent class="flex flex-col gap-2 pt-4">
           <CardTitle>
             <A href="https://lawcu-sum.vercel.app">Law Chula QA</A>
           </CardTitle>
