@@ -42,14 +42,14 @@ export default function Contact() {
                   </div>
                 </Button>
               </A>
-              <A class="flex flex-row items-center gap-4" href="mailto:nakonkate.t@gmail.com">
+              <a class="flex flex-row items-center gap-4" href="mailto:nakonkate.t@gmail.com">
                 <Mail class="size-10" />
                 <Button variant="ghost" class=" flex items-center py-6">
                   <div class="flex-1">
                     <p class="text-sm font-medium leading-none">nakonkate.t@gmail.com</p>
                   </div>
                 </Button>
-              </A>
+              </a>
             </CardContent>
           </Card>
         </section>

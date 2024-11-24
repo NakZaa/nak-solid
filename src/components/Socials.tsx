@@ -20,14 +20,14 @@ export default function Socials() {
       >
         <Github class="size-6" />
       </A>
-      <A
+      <a
         href="mailto:nakonkate.t@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
         class="text-muted-foreground hover:text-foreground"
       >
         <Mail class="size-6" />
-      </A>
+      </a>
     </section>
   );
 }
